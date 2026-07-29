@@ -1,0 +1,118 @@
+{
+  "expo": {
+    "name": "Fymble Business",
+    "slug": "fittbot-business",
+    "version": "2.0.8",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "adminapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fittbot.fittbot-business",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSCameraUsageDescription": "Fymble Business needs access to the camera to capture display pictures, and upload images to the gym community feed section.",
+        "NSPhotoLibraryUsageDescription": "Fymble Business requires access to your photo library to let you choose a display picture, and share visuals in the gym community feed.",
+        "NSMicrophoneUsageDescription": "Fymble Business uses your microphone to let you record and share audio posts in the gym community feed, allowing members to share fitness thoughts or instructions.",
+        "NSContactsUsageDescription": "This app requires access to your contacts during referral program.",
+        "NSLocationWhenInUseUsageDescription": "This app needs access to your location only when setting up gym location for GPS based attendance for clients."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.fittbot.fittbot_business",
+      "softwareKeyboardLayoutMode": "pan",
+      "googleServicesFile": "./google-services.json"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone to let you record and share audio posts in the gym community feed, allowing members to share fitness thoughts or instructions.."
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/notification-icon.png",
+          "color": "#FF5757",
+          "androidMode": "default",
+          "androidCollapsedTitle": "Fymble Business",
+          "androidSmallIcon": "./assets/images/notification-icon.png"
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera to capture display pictures, and upload images to the gym community feed & rewards section and Gym gallery"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Fymble Business to access your photo library so you can set a display picture, and post images to your gym's community feed & rewards section and Gym gallery.",
+          "cameraPermission": "Allow Fymble Business to use your camera for capturing profile pictures, and community feed posts & rewards section and Gym gallery."
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true,
+            "targetSdkVersion": 36
+          }
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "This app needs access to your location only when setting up gym location for GPS based attendance for clients."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "ba5670ac-efd7-4f6b-a538-2db185d42d8f"
+      },
+      "backendUrl": "https://dfc79ef4013e.ngrok-free.app",
+      "backendPort": "8000",
+      "disableHMRWarning": true
+    },
+    "updates": {
+      "url": "https://u.expo.dev/ba5670ac-efd7-4f6b-a538-2db185d42d8f",
+      "enabled": true,
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 0
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "owner": "martinraju"
+  }
+}
