@@ -43,11 +43,11 @@ const parseDailyPassFromAPI = (dailypass, categoryConfig) => {
       potentialRevenue: dailypass.seven_day.owner_per_day * 30,
     },
     {
-      label: `14 ${unitPlural}`,
-      price: dailypass.fourteen_day.pack_total,
-      extraPercent: dailypass.fourteen_day.extra_percent,
-      earnMore: dailypass.fourteen_day.extra_amount,
-      potentialRevenue: dailypass.fourteen_day.owner_per_day * 30,
+      label: `15 ${unitPlural}`,
+      price: dailypass.fifteen_day.pack_total,
+      extraPercent: dailypass.fifteen_day.extra_percent,
+      earnMore: dailypass.fifteen_day.extra_amount,
+      potentialRevenue: dailypass.fifteen_day.owner_per_day * 30,
     },
   ];
 };
